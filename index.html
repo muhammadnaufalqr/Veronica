@@ -1,153 +1,298 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Surat Spesial Buat Kamu ✨</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="description"
+      content="@feelthisray - Script HTML by Feeldream Repl Co"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
 
-  <meta name="description" content="Script HTML Surat Spesial Untukmu." />
-  <meta property="og:title" content="Spesial Untukmu ✨" />
-  <meta property="og:description" content="Aku Ada Surat Spesial Untukmu ✨" />
-  <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMDugl2siKVTnQUhkzqZXmNhnUl_IXm-tsnodgHf4C3dPn6v4gz06nVm1ASqpRXO65Dg3PkYB9bKsThBPUxygLD9Euem9SSTr0LRIGK9x5uaLvK4WIPn6VlSx0qSrPGhTknGVHeVMpioiBcXiqrk-dF3d4SYS8QIkWkDlMgRrdF4vw_iw-EOgTYcwo6xhs/s300/1000314955.jpg"/>
+    <title>Surat Spesial Buat Kamu ✨</title>
+    <meta name="description" content="Script HTML Surat Spesial Untukmu." />
 
-  <link rel="stylesheet" href="https://htmlku.com/suratbuatmu/style.css">
-  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <meta property="og:title" content="Spesial Untukmu ✨" />
+    <meta property="og:description" content="Aku Ada Surat Spesial Untukmu ✨" />
+    <meta
+      property="og:image"
+      content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMDugl2siKVTnQUhkzqZXmNhnUl_IXm-tsnodgHf4C3dPn6v4gz06nVm1ASqpRXO65Dg3PkYB9bKsThBPUxygLD9Euem9SSTr0LRIGK9x5uaLvK4WIPn6VlSx0qSrPGhTknGVHeVMpioiBcXiqrk-dF3d4SYS8QIkWkDlMgRrdF4vw_iw-EOgTYcwo6xhs/s300/1000314955.jpg"
+    />
 
-  <!-- ===== FLOATING HEARTS BACKGROUND ===== -->
-  <style>
-    #floating-bg {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 0;
-      overflow: hidden;
-    }
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Sriracha&family=Itim&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap"
+      rel="stylesheet"
+    />
 
-    .fheart {
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      background: rgba(255,80,120,.9);
-      transform: rotate(45deg);
-      animation: floatUp linear forwards;
-    }
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <link rel="stylesheet" href="https://htmlku.com/suratbuatmu/style.css" />
 
-    .fheart::before,
-    .fheart::after {
-      content: "";
-      position: absolute;
-      width: 12px;
-      height: 12px;
-      background: rgba(255,80,120,.9);
-      border-radius: 50%;
-    }
+    <!-- ===== FLOATING HEARTS BACKGROUND ===== -->
+    <style>
+      #floating-bg {
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        pointer-events: none;
+        z-index: 0;
+      }
 
-    .fheart::before { top: -6px; left: 0; }
-    .fheart::after { left: -6px; top: 0; }
+      .fheart {
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 80, 120, 0.9);
+        transform: rotate(45deg);
+        animation: floatUp linear forwards;
+        will-change: transform, opacity;
+      }
 
-    .fparticle {
-      position: absolute;
-      width: 4px;
-      height: 4px;
-      background: rgba(255,255,255,.6);
-      border-radius: 50%;
-      animation: floatUp linear forwards;
-    }
+      .fheart::before,
+      .fheart::after {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: rgba(255, 80, 120, 0.9);
+        border-radius: 50%;
+      }
 
-    @keyframes floatUp {
-      from { transform: translateY(0) rotate(45deg); opacity: 1; }
-      to { transform: translateY(-120vh) rotate(45deg); opacity: 0; }
-    }
+      .fheart::before {
+        top: -6px;
+        left: 0;
+      }
+      .fheart::after {
+        left: -6px;
+        top: 0;
+      }
 
-    .overlay, #envwrap, .container, .stiker {
-      position: relative;
-      z-index: 2;
-    }
-  </style>
-</head>
+      .fparticle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.6);
+        border-radius: 50%;
+        animation: floatUp linear forwards;
+        will-change: transform, opacity;
+      }
 
-<body>
+      @keyframes floatUp {
+        from {
+          transform: translateY(0) rotate(45deg);
+          opacity: 1;
+        }
+        to {
+          transform: translateY(-120vh) rotate(45deg);
+          opacity: 0;
+        }
+      }
 
-<!-- BACKGROUND ANIMATION -->
-<div id="floating-bg"></div>
+      /* Pastikan konten surat ada di atas floating-bg */
+      .overlay,
+      #bodyblur,
+      #envwrap,
+      .reset,
+      .stiker,
+      .container,
+      #scontainer {
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+  </head>
 
-<!-- ===== KONTEN ASLI KAMU (AMAN) ===== -->
+  <body>
+    <!-- Floating background layer -->
+    <div id="floating-bg" aria-hidden="true"></div>
 
-<div class="overlay">
-  <div class="cover">
-    <p>Sentuh Untuk Dibawah Untuk Mulai Yaa Sayangkuu :* ✨</p>
-    <div class="awalan">
-      <label>Pencet Disini 💗</label>
-    </div>
-  </div>
-</div>
+    <div class="overlay">
+      <div class="cover">
+        <p>Sentuh Untuk Dibawah Untuk Mulai Yaa Sayangkuu :* ✨</p>
 
-<div id="bodyblur">
-  <img id="wallpaper" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgSarRYKvuFifh4eOGx9HqHtzuZDS88uX0_CTid4m_3yO4XxipPT0O6g_keBAArlNlXkQotU_VkChnuDF1DGiw9fQkNh-tuC7Tmtg7xSEyD0Jb6WM-cgS2X8K5MTphv-SEZfszgH8l2qw8ORfCaPKY8pQjDoSTFSFSRnxIduBFDFFDwhGCFb7JokMav6x8/s1600/50995.jpg">
-  <div id="thisblur"></div>
-</div>
+        <div class="awalan">
+          <svg
+            class="line"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+          >
+            <g transform="translate(2.000000, 2.000000)">
+              <path
+                d="M9.27542857,0.714285714 C14.0030476,0.714285714 17.836381,4.54666667 17.836381,9.2752381 C17.836381,14.0038095 14.0030476,17.8361905 9.27542857,17.8361905 C4.54685714,17.8361905 0.71447619,14.0038095 0.71447619,9.2752381 C0.71447619,4.54666667 4.54685714,0.714285714 9.27542857,0.714285714 Z"
+              ></path>
+              <path
+                d="M17.8989524,16.487619 C18.678,16.487619 19.3094286,17.12 19.3094286,17.8980952 C19.3094286,18.6780952 18.678,19.3095238 17.8989524,19.3095238 C17.1199048,19.3095238 16.4875238,18.6780952 16.4875238,17.8980952 C16.4875238,17.12 17.1199048,16.487619 17.8989524,16.487619 Z"
+              ></path>
+            </g>
+          </svg>
 
-<audio src="https://htmlku.my.id/foryoumama/sediaaku.m4a" id="linkmp3"></audio>
-
-<div id="envwrap" class="envlope-wrapper">
-  <div id="envelope" class="close">
-    <div class="wax-seal"></div>
-    <div class="front flap"></div>
-    <div class="front pocket"></div>
-    <div class="letter">
-      <div class="message">
-        <p>Aluuu Sayangku Vero! 🩷</p>
-        <p>......</p>
+          <label style="font-size: 16px"
+            >Pencet Disini <br />
+            Kalau Di sana Sudah Sama Yang Lain :) hehe</label
+          >
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
-<div class="reset">
-  <button id="open">Buka Surat 🩷</button>
-</div>
+    <div id="bodyblur">
+      <img
+        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgSarRYKvuFifh4eOGx9HqHtzuZDS88uX0_CTid4m_3yO4XxipPT0O6g_keBAArlNlXkQotU_VkChnuDF1DGiw9fQkNh-tuC7Tmtg7xSEyD0Jb6WM-cgS2X8K5MTphv-SEZfszgH8l2qw8ORfCaPKY8pQjDoSTFSFSRnxIduBFDFFDwhGCFb7JokMav6x8/s1600/50995.jpg"
+        id="wallpaper"
+        alt="Wallpaper"
+      />
+      <div id="thisblur"></div>
+    </div>
 
-<div class="stiker">
-  <img src="https://htmlku.com/0/panda/cinta.gif">
-</div>
+    <audio
+      src="https://htmlku.my.id/foryoumama/sediaaku.m4a"
+      id="linkmp3"
+    ></audio>
 
-<div class="container">
-  <p class="titleC"><b>Aluuuu Kamuuu Iyaa Kamu Sayangku Vero! 🫣💗</b></p>
-  <p class="messageC"></p>
-</div>
+    <div id="envwrap" class="envlope-wrapper">
+      <div id="envelope" class="close">
+        <div class="wax-seal"></div>
+        <div class="front flap"></div>
+        <div class="front pocket"></div>
 
-<script src="https://htmlku.com/suratbuatmu/script.js"></script>
+        <div class="letter">
+          <div class="letter-corner corner-tl"></div>
+          <div class="letter-corner corner-br"></div>
 
-<!-- ===== FLOATING SCRIPT ===== -->
-<script>
-const bg = document.getElementById("floating-bg");
+          <div class="message">
+            <p>Aluuu Sayangku Vero! 🩷</p>
+            <p>......</p>
+          </div>
+        </div>
 
-function heart() {
-  const h = document.createElement("div");
-  h.className = "fheart";
-  h.style.left = Math.random() * 100 + "vw";
-  h.style.bottom = "-20px";
-  h.style.animationDuration = (4 + Math.random() * 3) + "s";
-  bg.appendChild(h);
-  setTimeout(()=>h.remove(),8000);
-}
+        <div class="hearts">
+          <div class="heart a1"></div>
+          <div class="heart a2"></div>
+          <div class="heart a3"></div>
+        </div>
 
-function particle() {
-  const p = document.createElement("div");
-  p.className = "fparticle";
-  p.style.left = Math.random() * 100 + "vw";
-  p.style.bottom = "-10px";
-  p.style.animationDuration = (6 + Math.random() * 5) + "s";
-  bg.appendChild(p);
-  setTimeout(()=>p.remove(),12000);
-}
+        <div class="sparkles">
+          <div class="sparkle s1"></div>
+          <div class="sparkle s2"></div>
+          <div class="sparkle s3"></div>
+        </div>
+      </div>
+    </div>
 
-setInterval(heart, 350);
-setInterval(particle, 180);
-</script>
+    <div class="reset">
+      <button id="open">Buka Surat 🩷</button>
+    </div>
 
-</body>
+    <div class="stiker">
+      <img id="main-stiker" src="https://htmlku.com/0/panda/cinta.gif" alt="Stiker" />
+      <img id="stikerAlt1" src="https://htmlku.com/0/panda/terlope.gif" alt="Stiker alt" />
+    </div>
+
+    <div class="container" id="container">
+      <p class="titleC"><b>Aluuuu Kamuuu Iyaa Kamu Sayangku Vero! 🫣💗</b></p>
+      <p class="messageC"></p>
+    </div>
+
+    <div class="hidden">
+      <p id="pesanSurat1"><i class="fontAlt">Happy New Year</i> 🥳</p>
+
+      <p id="pesanSurat2">
+        Akuu mauu bilangg sesuatuu buattt kamuu, makasiii udaaa hadirr di hidup
+        akuuu, semenjak adaa kamuu hiduppp akuuu lebihh bewarnaaa dan lebih
+        bahagiaa, <i>Im Very Lucky To Have You</i>, maaf ya sayanggg kalau aku
+        belum bisa kasih yang terbaik buat kamuu, tapi aku sayanggg banget sama
+        kamuuu 😍💗<br /><br />
+        Akuu gatauuu lagi harus gimanaa kalau nantiii kamu pergiii darii hidupp
+        akuu, mungkinn hidupp akuu bakal hampa, ga bewarnaa, jadi.. tolong jangan
+        pernahh ninggalin aku yaa?? ehhh tapii gatauu siihh hahahah 🫠
+        <b>i loveee youuuu</b> semestaakuuuu 🫶
+      </p>
+
+      <p id="pesanSurat3">
+        Ngga banyak kata yang bisa aku ungkapin buat kamu... cuma mau bilang
+        makasih ya, Sayang, udah nemenin aku sepanjang 2025, dari momen biasa
+        menjadi luar biasa karena ada kamu 🫠 Di tahun 2026 nanti, aku cuma pengen
+        satu hal sederhana: semoga kita tetep bersama 💑 bukan cuma sekarang, tapi
+        juga di hari-hari setelahnya 🫶 Semoga tiap lelah bisa kita peluk bareng,
+        tiap sedih bisa kita ceritain tanpa takut dihakimi, dan tiap bahagia
+        selalu pengen dibagi ke orang yang sama, yaitu kamu 💗 Maaf aku belum bisa
+        jadi yang terbaik buat kamu I love you more than yesterday, but less than
+        tomorrow... 🌹<br />
+        <i class="fontAlt">Happy New Year</i>
+        <br />
+        <i class="fontAlt">Naufal 😻💐</i>
+      </p>
+    </div>
+
+    <div id="scontainer">
+      <div class="swrapper">
+        <div class="box">
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://htmlku.com/suratbuatmu/script.js"></script>
+
+    <!-- ===== FLOATING SCRIPT ===== -->
+    <script>
+      const bg = document.getElementById("floating-bg");
+      let heartTimer = null;
+      let particleTimer = null;
+
+      function spawnHeart() {
+        const h = document.createElement("div");
+        h.className = "fheart";
+        h.style.left = Math.random() * 100 + "vw";
+        h.style.bottom = "-20px";
+        h.style.animationDuration = 4 + Math.random() * 3 + "s";
+        bg.appendChild(h);
+        setTimeout(() => h.remove(), 9000);
+      }
+
+      function spawnParticle() {
+        const p = document.createElement("div");
+        p.className = "fparticle";
+        p.style.left = Math.random() * 100 + "vw";
+        p.style.bottom = "-10px";
+        p.style.animationDuration = 6 + Math.random() * 5 + "s";
+        bg.appendChild(p);
+        setTimeout(() => p.remove(), 13000);
+      }
+
+      function startFloating() {
+        if (heartTimer || particleTimer) return;
+        heartTimer = setInterval(spawnHeart, 350);
+        particleTimer = setInterval(spawnParticle, 180);
+      }
+
+      function stopFloating() {
+        clearInterval(heartTimer);
+        clearInterval(particleTimer);
+        heartTimer = null;
+        particleTimer = null;
+      }
+
+      startFloating();
+
+      document.addEventListener("visibilitychange", () => {
+        if (document.visibilityState === "hidden") stopFloating();
+        else startFloating();
+      });
+    </script>
+  </body>
 </html>
