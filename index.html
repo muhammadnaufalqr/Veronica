@@ -13,14 +13,14 @@
 
     <title>Surat Spesial Buat Kamu ✨</title>
 
-    <!-- Catatan: kamu punya 2 meta description. Biasanya cukup 1. -->
     <meta name="description" content="Script HTML Surat Spesial Untukmu." />
 
     <meta property="og:title" content="Spesial Untukmu ✨" />
     <meta property="og:description" content="Aku Ada Surat Spesial Untukmu ✨" />
-    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMDugl2siKVTnQUhkzqZXmNhnUl_IXm-tsnodgHf4C3dPn6v4gz06nVm1ASqpRXO65Dg3PkYB9bKsThBPUxygLD9Euem9SSTr0LRIGK9x5uaLvK4WIPn6VlSx0qSrPGhTknGVHeVMpioiBcXiqrk-dF3d4SYS8QIkWkDlMgRrdF4vw_iw-EOgTYcwo6xhs/s300/1000314955.jpg"
+    <meta
+      property="og:image"
+      content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhMDugl2siKVTnQUhkzqZXmNhnUl_IXm-tsnodgHf4C3dPn6v4gz06nVm1ASqpRXO65Dg3PkYB9bKsThBPUxygLD9Euem9SSTr0LRIGK9x5uaLvK4WIPn6VlSx0qSrPGhTknGVHeVMpioiBcXiqrk-dF3d4SYS8QIkWkDlMgRrdF4vw_iw-EOgTYcwo6xhs/s300/1000314955.jpg"
     />
-
 
     <link
       href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
@@ -39,16 +39,37 @@
 
     <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
     <link rel="stylesheet" href="https://htmlku.com/suratbuatmu/style.css" />
+
+    <!-- Tambahan CSS: background overlay layar pertama -->
+    <style>
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+          url("https://raw.githubusercontent.com/muhammadnaufalqr/Veronica/main/image.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        z-index: 9999;
+      }
+    </style>
   </head>
 
   <body>
-    
     <div class="overlay">
       <div class="cover">
         <p>Sentuh Untuk Dibawah Untuk Mulai Yaa Sayangkuu :* ✨</p>
 
         <div class="awalan">
-          
           <svg
             class="line"
             fill="none"
@@ -65,27 +86,25 @@
             </g>
           </svg>
 
-          <label style="font-size: 16px">Pencet Disini <br> Kalau Di sana Sudah Sama Yang Lain :) hehe</label>
+          <label style="font-size: 16px"
+            >Pencet Disini <br />
+            Kalau Di sana Sudah Sama Yang Lain :) hehe</label
+          >
         </div>
       </div>
     </div>
 
     <div id="bodyblur">
       <!-- Ganti Wallpaper di Sini -->
-      
       <img
         src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgSarRYKvuFifh4eOGx9HqHtzuZDS88uX0_CTid4m_3yO4XxipPT0O6g_keBAArlNlXkQotU_VkChnuDF1DGiw9fQkNh-tuC7Tmtg7xSEyD0Jb6WM-cgS2X8K5MTphv-SEZfszgH8l2qw8ORfCaPKY8pQjDoSTFSFSRnxIduBFDFFDwhGCFb7JokMav6x8/s1600/50995.jpg"
         id="wallpaper"
-        style="background: url(&quot;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhgSarRYKvuFifh4eOGx9HqHtzuZDS88uX0_CTid4m_3yO4XxipPT0O6g_keBAArlNlXkQotU_VkChnuDF1DGiw9fQkNh-tuC7Tmtg7xSEyD0Jb6WM-cgS2X8K5MTphv-SEZfszgH8l2qw8ORfCaPKY8pQjDoSTFSFSRnxIduBFDFFDwhGCFb7JokMav6x8/s1600/50995.jpg&quot;) center center / cover no-repeat fixed;">
       />
       <div id="thisblur"></div>
     </div>
 
     <!-- Ganti Audio di Sini -->
-    <audio
-      src="https://htmlku.my.id/foryoumama/sediaaku.m4a"
-      id="linkmp3"
-    ></audio>
+    <audio src="https://htmlku.my.id/foryoumama/sediaaku.m4a" id="linkmp3"></audio>
 
     <div id="envwrap" class="envlope-wrapper">
       <div id="envelope" class="close">
@@ -133,9 +152,7 @@
 
     <!-- Isi Pesan Surat Di Sini -->
     <div class="hidden">
-      <p id="pesanSurat1">
-        <i class="fontAlt">Happy New Year</i> 🥳
-      </p>
+      <p id="pesanSurat1"><i class="fontAlt">Happy New Year</i> 🥳</p>
 
       <p id="pesanSurat2">
         Akuu mauu bilangg sesuatuu buattt kamuu, makasiii udaaa hadirr di hidup
@@ -145,33 +162,30 @@
         kamuuu 😍💗<br /><br />
         Akuu gatauuu lagi harus gimanaa kalau nantiii kamu pergiii darii hidupp
         akuu, mungkinn hidupp akuu bakal hampa, ga bewarnaa, jadi.. tolong jangan
-        pernahh ninggalin aku yaa?? ehhh tapii gatauu siihh hahahah 🫠 <b>i loveee youuuu</b> semestaakuuuu 🫶
+        pernahh ninggalin aku yaa?? ehhh tapii gatauu siihh hahahah 🫠
+        <b>i loveee youuuu</b> semestaakuuuu 🫶
       </p>
 
       <p id="pesanSurat3">
-        Ngga banyak kata yang bisa aku ungkapin buat kamu... cuma mau bilang makasih ya, Sayang, udah nemenin aku sepanjang 2025, dari momen biasa menjadi luar biasa karena ada kamu 🫠
-        Di tahun 2026 nanti, aku cuma pengen satu hal sederhana: semoga kita tetep bersama 💑 bukan cuma sekarang, tapi juga di hari-hari setelahnya 🫶
-        Semoga tiap lelah bisa kita peluk bareng, tiap sedih bisa kita ceritain tanpa takut dihakimi, dan tiap bahagia selalu pengen dibagi ke orang yang sama, yaitu kamu 💗
-        Maaf aku belum bisa jadi yang terbaik buat kamu
-        I love you more than yesterday, but less than tomorrow... 🌹<br />
-        <i class="fontAlt">Happy New Year</i> 
-        <br> <i class="fontAlt">Naufal 😻💐</i>
+        Ngga banyak kata yang bisa aku ungkapin buat kamu... cuma mau bilang
+        makasih ya, Sayang, udah nemenin aku sepanjang 2025, dari momen biasa
+        menjadi luar biasa karena ada kamu 🫠 Di tahun 2026 nanti, aku cuma pengen
+        satu hal sederhana: semoga kita tetep bersama 💑 bukan cuma sekarang, tapi
+        juga di hari-hari setelahnya 🫶 Semoga tiap lelah bisa kita peluk bareng,
+        tiap sedih bisa kita ceritain tanpa takut dihakimi, dan tiap bahagia
+        selalu pengen dibagi ke orang yang sama, yaitu kamu 💗 Maaf aku belum bisa
+        jadi yang terbaik buat kamu I love you more than yesterday, but less than
+        tomorrow... 🌹<br />
+        <i class="fontAlt">Happy New Year</i> <br />
+        <i class="fontAlt">Naufal 😻💐</i>
       </p>
     </div>
 
     <div id="scontainer">
       <div class="swrapper">
         <div class="box">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div></div><div></div><div></div><div></div><div></div>
+          <div></div><div></div><div></div><div></div><div></div>
         </div>
       </div>
     </div>
@@ -179,5 +193,3 @@
     <script src="https://htmlku.com/suratbuatmu/script.js"></script>
   </body>
 </html>
-
-
