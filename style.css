@@ -117,3 +117,25 @@
 	    opacity: 0;
 	  }
 	}
+/* === OVERLAY (LAYAR PERTAMA) BACKGROUND FOTO === */
+.overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Foto background */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("https://raw.githubusercontent.com/muhammadnaufalqr/Veronica/main/image.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  z-index: 9999;
+}
