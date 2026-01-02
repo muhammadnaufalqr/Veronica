@@ -11,7 +11,17 @@
         @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
         
-        body {background: black;font-family:"Sriracha",serif;overflow:hidden}
+        body{
+  font-family:"Sriracha",serif;
+  overflow:hidden;
+
+  background-image: url('image.jpg'); /* bg.jpg sefolder index.html */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
         
         #bodyblur{opacity:.4;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.5);transition:all 1s ease;}
         #sthisblur{backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);position:absolute;top:0;left:0;right:0;bottom:0;}
